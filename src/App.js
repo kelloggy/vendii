@@ -313,11 +313,19 @@ const App = () => {
             })}
           </select>
                   
-          <IconButton id='button1' onClick={handleLeftArrow}>
+          <IconButton 
+            id='button1' 
+            onClick={handleLeftArrow}
+            disabled={currentPage == 1 ? true : false}
+          >
             <AiOutlineArrowLeft className={classes.icon}/>
           </IconButton> 
 
-          <IconButton id='button2' onClick={handleRightArrow}>
+          <IconButton 
+            id='button2' 
+            onClick={handleRightArrow}
+            disabled={currentPage == 12 ? true : false}
+          >
             <AiOutlineArrowRight className={classes.icon}/>
           </IconButton>
         </Box>
